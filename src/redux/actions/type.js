@@ -1,0 +1,7 @@
+export const LOADING_START = 'LOADING_START';
+export const LOADING_END = 'LOADING_END';
+export const SET_AUTH_TOKEN = 'SET_AUTH_TOKEN';
+export const LOGOUT = 'LOGOUT';
+export const CONTACTS = 'CONTACTS';
+export const SET_CONTACT_DETAILS = 'SET_CONTACT_DETAILS';
+export const REMOVE_CONTACT = 'REMOVE_CONTACT';
