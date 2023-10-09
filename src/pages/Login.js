@@ -7,8 +7,9 @@ import {
   Input,
   Button,
   Title,
+  ContactLink,
 } from '../components/styledComponents';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -25,22 +26,24 @@ const Login = () => {
   };
 
   return (
-    <Container>
-      <Link to={`/register`} target="blanck">
+    <>
+      <ContactLink to={`/register`} target="blanck">
         Sing Up
-      </Link>
-      <Form onSubmit={handleSubmit}>
-        <Title>Login</Title>
-        <Input type="email" name="email" placeholder="Email" required />
-        <Input
-          type="password"
-          name="password"
-          placeholder="Password"
-          required
-        />
-        <Button type="submit">Login</Button>
-      </Form>
-    </Container>
+      </ContactLink>
+      <Container>
+        <Form onSubmit={handleSubmit}>
+          <Title>Login</Title>
+          <Input type="email" name="email" placeholder="Email" required />
+          <Input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+          <Button type="submit">Login</Button>
+        </Form>
+      </Container>
+    </>
   );
 };
 
