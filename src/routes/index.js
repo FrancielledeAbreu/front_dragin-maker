@@ -5,6 +5,7 @@ import Register from '../pages/Register';
 import PrivateRoute from './PrivateRoute';
 import Contacts from '../pages/Contacts';
 import ContactDetails from '../pages/ContactDetails';
+import AddContact from '../pages/AddContact';
 
 export const routes = [
   { path: '/', element: <Login />, name: 'login' },
@@ -29,6 +30,14 @@ const RoutesComponent = () => {
         element={
           <PrivateRoute>
             <ContactDetails />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/add-contact"
+        element={
+          <PrivateRoute>
+            <AddContact />
           </PrivateRoute>
         }
       />

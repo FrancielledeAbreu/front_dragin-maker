@@ -16,3 +16,16 @@ api.interceptors.request.use(
 );
 
 export default api;
+
+
+export const searchContacts = (name, cpf) => {
+  let url = 'api/v1/contacts/search?';
+
+  if (name) url += `name=${name}`;
+  if (cpf) {
+    if (name) url += `&`;
+    url += `cpf=${cpf}`;
+  }
+
+  return api.get(url);
+};
